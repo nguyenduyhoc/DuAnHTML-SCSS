@@ -1,0 +1,666 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    width: 100% !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+// HEADER 
+header {
+    .web__logo {
+        width: 50%;
+    }
+}
+
+#img__avatar {
+    padding-top: 5px;
+    padding-right: 2px;
+    border: dotted 1px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    a {
+        .avatar {
+            height: auto;
+            width: 30px;
+            border-radius: 25px;
+            margin-right: 5px;
+        }
+        color: rgba(0, 0, 0, .5);
+        text-decoration: none;
+    }
+}
+
+// Carousel:
+
+.text__img {
+    position: absolute;
+    right: 49%;
+    top: 33%;
+    left: 45%;
+    bottom: 60%;
+    a {
+        visibility: hidden;
+        opacity: 0;
+        font-size: 3.5rem;
+        color: rgba(255, 255, 255, 0.836);
+    }
+}
+
+.carousel-item:hover {
+    .text__img {
+        a {
+            transition: all 0.5s;
+            visibility: inherit;
+            opacity: 1;
+        }
+    }
+}
+
+.list-nav {
+    width: 55%;
+    justify-content: flex-end;
+}
+
+.list-nav__account-dropdown {
+    width: 45%;
+    justify-content: flex-end;
+}
+
+// Tool Block
+.tool__block {
+    border: 1px none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 5px 5px #ecebeb;
+    max-width: 940px;
+    height: 80px;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+
+//Showing
+.btn__show {
+    justify-content: center;
+    padding: 10px 0;
+    a {
+        color: black;
+        transition: all 0.5s;
+        font-size: 20px;
+        &:hover {
+            font-size: 25px;
+            color: red;
+        }
+    }
+}
+
+.slick-next:before {
+    color: black;
+}
+
+.slick-prev:before {
+    color: black;
+}
+
+// -- Nav tabs 
+.poster {
+    position: relative;
+}
+
+.poster__text {
+    position: relative;
+    margin: 1rem 0;
+    transition: all 0.5s;
+}
+
+.poster__play__icon {
+    a {
+        width: 100%;
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        font-size: 2rem;
+        bottom: 18rem;
+        left: 8rem;
+        right: 8rem;
+        color: rgba(255, 255, 255, 0.849);
+        position: absolute;
+        transition: all 0.5s;
+    }
+}
+
+.poster__text {
+    .btn {
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+    }
+}
+
+.poster__img {
+    position: relative;
+    img {
+        padding: 1rem;
+        width: 100%;
+        height: 100%;
+    }
+    p,
+    h6 {
+        padding: 0 1rem;
+    }
+}
+
+.poster__img:hover {
+    width: 100%;
+    height: 100%;
+    .poster__text {
+        p,
+        h6 {
+            visibility: hidden;
+        }
+    }
+    a {
+        visibility: inherit;
+        opacity: 1;
+    }
+    .btn {
+        margin: 0 1rem;
+        padding: 1rem;
+        bottom: 1rem;
+        visibility: inherit;
+        opacity: 1;
+        width: 90%;
+        height: auto;
+        transition: all 0.5s;
+    }
+}
+
+.content-overlay {
+    background: linear-gradient(to top, #000000b4, #ffffff1c);
+    position: absolute;
+    width: auto;
+    margin: 1rem;
+    height: 76%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.content:hover .content-overlay {
+    opacity: 1;
+}
+
+// News
+.news__content {
+    display: flex;
+    padding: 1rem;
+    .contain__text {
+        width: 50%;
+    }
+}
+
+.news__text {
+    a {
+        text-decoration: none;
+        color: black;
+        margin: 0 5px;
+        padding: 2% 0;
+        font-size: 14px;
+        transition: all 0.5s;
+        &:hover {
+            color: red;
+        }
+    }
+    img {
+        padding: 0 16px;
+        width: 100%;
+        border-radius: 5%;
+    }
+}
+
+.news {
+    .small__text__content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        img {
+            width: 35%;
+            height: 35%;
+            border-radius: 34%;
+        }
+    }
+}
+
+// List Cinemas
+#homeCinemaHeadBackground img {
+    width: 100%;
+    height: 100px;
+}
+
+#homeCinemaComplex {
+    .listPCinemas {
+        display: block;
+        min-height: 705px;
+        border: 1px solid #ebebec;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        li {
+            width: 100%;
+            height: 90px;
+            opacity: 0.5;
+            a {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                img {
+                    justify-items: center;
+                    text-align: center;
+                    display: inline-block;
+                    width: 50px;
+                }
+            }
+            a::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: calc(100% - 40px);
+                transform: translateX(-50%);
+                border-bottom: 1px solid #fff;
+                border-color: rgba(238, 238, 238, 0.88);
+            }
+        }
+        li:hover {
+            opacity: 1;
+        }
+    }
+    #listCinemas {
+        min-height: 705px;
+        border-top: 1px solid #ebebec;
+        border-bottom: 1px solid #ebebec;
+        height: 705px;
+        overflow: hidden;
+        .cinemas {
+            padding: 15px;
+            padding-left: 20px;
+            display: flex;
+            clear: both;
+            width: 100%;
+            position: relative;
+            opacity: 0.5;
+            cursor: pointer;
+            transition: all 0.2s;
+            span {
+                display: block;
+                line-height: 1.4;
+            }
+            .nameCinema {
+                font-size: 14px;
+                color: #000;
+            }
+            .colorCinema {
+                display: inline-block !important;
+            }
+            .colorCinema.BHD {
+                color: #8bc541;
+            }
+            .infoMovieCinema {
+                font-size: 12px;
+                color: #949494;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .detailMovieCinema a {
+                color: red;
+                font-size: 12px;
+            }
+            .cinemasImage {
+                width: 50px;
+                height: 50px;
+                margin-right: 20px;
+            }
+        }
+        .cinemas:hover {
+            opacity: 1;
+        }
+        .cinemas::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: calc(100% - 40px);
+            transform: translateX(-50%);
+            border-bottom: 1px solid #fff;
+            border-color: rgba(238, 238, 238, 0.88);
+        }
+    }
+    .active {
+        opacity: 1 !important;
+    }
+    #listMovie {
+        display: flexbox;
+        height: 705px;   
+        border: 1px solid #ebebec;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .movieInfo {
+            display: flex;
+            cursor: pointer;
+            width: 100%;
+        }
+        .wrapMovie {
+            display: flexbox;
+            padding-bottom: 17px;
+            padding-top: 20px;
+            padding-right: 15px;
+            padding-left: 20px;
+            width: 100%;
+            position: relative;
+            margin-bottom: 0;
+            border: none;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+        .wrapMovie::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: calc(100% - 40px);
+            transform: translateX(-50%);
+            border-bottom: 1px solid #ccc;
+            border-color: rgba(238, 238, 238, 0.88);
+        }
+        .movieImage {
+            width: 50px;
+            display: flex;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .wrapInfo {
+            p {
+                margin: 0;
+                line-height: 1.7;
+                font-size: 12px;
+                color: #9b9b9b;
+            }
+            .ageTag {
+                background-color: #fb4226;
+                color: #fff;
+                border-radius: 4px;
+                padding: 0 5px;
+                float: left;
+                margin-right: 5px;
+                font-size: 12px;
+                min-width: 33px;
+                text-align: center;
+            }
+            .ageTag-general {
+                background-color: #00ac4d;
+            }
+            .movieTitle {
+                font-size: 14px;
+                display: block;
+                font-family: "SF Medium";
+                line-height: 22px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: #000;
+            }
+        }
+        .movieSession {
+            display: flex;
+            width: 100%;
+            transition: height 0.3s ease-in-out;
+        }
+        .listTagTime {
+            display: block;
+            width: 100%;
+            padding-top: 15px;
+        }
+        .movieVersion {
+            display: flex;
+            width: 100%;
+            font-family: "SF Medium";
+            font-size: 16px;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        .movieTimeSession {
+            width: calc(25% - 10px);
+            font-family: "SF Medium";
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0px 10px 10px 0px;
+            padding: 5px 10px;
+            transition: all 0.2s;
+            text-decoration: none;
+            text-align: center;
+            background-color: rgba(246, 246, 246, 0.5);
+            border-radius: 7px;
+            color: #9b9b9b;
+            border: 1px solid #e4e4e4;
+            .movie-start-time {
+                font-size: 18px;
+                font-weight: 500;
+                color: #108f3e;
+            }
+        }
+    }
+}
+
+//App
+.MaxWidth940 {
+    max-width: 940px;
+    margin: auto;
+}
+
+#wrapHomeApp {
+    #homeApp {
+        padding: 120px 0 80px 0;
+        background-image: url("../img/App/backapp.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .app_textLeft {
+            color: #fff;
+            font-weight: 700;
+            font-size: xx-large;
+        }
+        .app_textSmallLeft {
+            color: #fff;
+            font-size: medium;
+        }
+        #app_buttonLeft {
+            background-color: #fb4226;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: medium;
+            font-weight: 700;
+            border: none;
+            border-radius: 4px;
+        }
+        .app_textUnder {
+            color: #fff;
+            padding-top: 10px;
+        }
+        .app_content_right {
+            position: relative;
+            padding: 0;
+            .phone_img {
+                max-width: 100%;
+                padding: 0 28%;
+                display: block;
+                height: auto;
+            }
+            .app_phoneSlider {
+                position: absolute;
+                padding: 1.5% 29.3% 0 29.3%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                .slick-list {
+                    border-radius: 20px;
+                }
+                .slick-slide {
+                    height: auto;
+                }
+                .slickComponent {
+                    position: relative;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//footer
+footer {
+    background-color: #222;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #949494;
+    .title {
+        color: #fff;
+        font-size: 80%;
+    }
+    #footer_document {
+        padding-left: 0;
+        a {
+            font-size: 12px !important;
+            font-size: 80%;
+            font-weight: 700;
+            white-space: nowrap;
+            color: #949494;
+            display: block;
+            transition: all 0.2s;
+            line-height: 2.3;
+        }
+    }
+    .partnerLine {
+        margin-bottom: 15px;
+        padding-left: 0;
+        padding-right: 0;
+        .iconConnect {
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            margin-right: 15px;
+        }
+    }
+    #footer_social {
+        .textCenter {
+            text-align: center;
+        }
+        .social_image_logo {
+            background: 0 0;
+            height: 30px;
+            width: auto;
+            margin: 5px;
+        }
+    }
+    hr {
+        border-top: 1px solid #4a4a4a;
+    }
+    .imgFooter {
+        text-align: center;
+        padding: 0;
+        .zion_icon {
+            width: 80px;
+            height: auto;
+            border-radius: 8px;
+        }
+    }
+    .infoFooter {
+        color: #fff;
+        
+        font-size: 70%;
+        span {
+            display: block;
+            line-height: 1.8;
+            color: #949494;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        span:first-child {
+            color: #fff;
+        }
+    }
+    .imgBoCo {
+        width: 130px;
+        float: right;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    /* For tablets: */
+    .news__content {
+        display: block;
+    }
+    .news .small__text__content img {
+        width: 20%;
+        height: 35%;
+        padding: 3px 0;
+        border-radius: 34%;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    /* For mobile phones: */
+    .content-overlay {
+        background: linear-gradient(to top, #000000b4, #ffffff1c);
+        position: absolute;
+        width: auto;
+        margin: 1rem;
+        height: 80%;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    .btn__show {
+        a {
+            color: black;
+            transition: all 0.5s;
+            font-size: 20px;
+            &:hover {
+                font-size: 25px;
+                color: red;
+            }
+            display: block;
+        }
+    }
+    .news__content {
+        display: block;
+    }
+    .news .small__text__content img {
+        width: 20%;
+        height: 35%;
+        padding: 3px 0;
+        border-radius: 34%;
+    }
+    .poster__text {
+        display: none;
+    }
+    
+
+    
+}
